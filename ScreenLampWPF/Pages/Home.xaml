@@ -22,14 +22,14 @@
                    VerticalAlignment="Bottom"
                    HorizontalAlignment="Center"
                    >
-            <TextBlock Text="Current Device Id:"
+            <TextBlock Text="Current Device IP:"
                        Foreground="#FFFFFF"
                        FontSize="16"
                        FontFamily="Cascadia Code"
                        Margin="0,0,0,5"
                        HorizontalAlignment="Center"/>
-            <TextBlock x:Name="DeviceIdBlock"
-                       Text="123456789"
+            <TextBlock x:Name="DeviceIPBlock"
+                       Text="Device missing"
                        Foreground="#7289DA"
                        FontSize="20"
                        FontFamily="Cascadia Code"

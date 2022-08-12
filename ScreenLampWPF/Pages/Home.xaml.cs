@@ -42,6 +42,11 @@ namespace ScreenLampWPF.Pages
         {
             InitializeComponent();
 
+            if (Settings.Default.DEVICE_IP != "")
+            {
+                DeviceIPBlock.Text = Settings.Default.DEVICE_IP;
+            }
+
             Worker.DoWork += ColorListening_DoWork;
             Worker.ProgressChanged += ColorListening_ProgressChanged;
             Worker.WorkerReportsProgress = true;
@@ -134,10 +139,9 @@ namespace ScreenLampWPF.Pages
             string color = ColorTaker.Take(Settings.Default.X_PIXEL, Settings.Default.Y_PIXEL); // 960, 540 center
             if (oldColor != color)
             {
-                DeviceIdBlock.Text = color;
+                /*DeviceIPBlock.Text = color;*/
                 var bc = new BrushConverter();
-                DeviceIdBlock.Foreground = (Brush)bc.ConvertFrom(color);
-                Console.WriteLine(color);
+                DeviceIPBlock.Foreground = (Brush)bc.ConvertFrom(color);
 
                 await _tapoConnection.setColour(color, _tapoToken);
                 oldColor = color;
