@@ -110,6 +110,7 @@ namespace ScreenLampWPF.Pages
                 ShowSettings(this, e);
             }
         }
+
         private void ToSetUpDevice_Click(object sender, RoutedEventArgs e)
         {
             if (ShowSetUp != null)

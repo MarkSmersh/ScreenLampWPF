@@ -74,7 +74,7 @@ namespace ScreenLampWPF
 
         private void WinClose_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            App.Current.Shutdown();
         }
 
         #endregion
@@ -119,12 +119,14 @@ namespace ScreenLampWPF
         void Window_BackToHome(object sender, EventArgs e)
         {
             MainFrame.NavigationService.RemoveBackEntry();
+            _homePage.DeviceIPBlock.Text = Settings.Default.DEVICE_IP;
             MainFrame.Content = _homePage;
         }
 
         void AppSettings_Update(object sender, EventArgs e)
         {
             Topmost = Settings.Default.PIN_APP;
+            _homePage.DeviceIPBlock.Text = Settings.Default.DEVICE_IP;
         }
 
         void HomePage_ShowSettings(object sender, EventArgs e)

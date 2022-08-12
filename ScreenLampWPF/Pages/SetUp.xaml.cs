@@ -33,6 +33,8 @@ namespace ScreenLampWPF.Pages
         private string _password;
         private string _deviceIP;
 
+        public event EventHandler Update;
+
         private ColorPalette _cp = new ColorPalette();
         private Alerts _alerts = new Alerts();
 
