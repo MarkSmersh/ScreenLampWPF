@@ -40,5 +40,5 @@ jobs:
       - uses: csexton/release-asset-action@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          pattern: ScreenLampWPF/bin/Release/net6.0-windows/win-x64/*.zip
+          pattern: publish.zip
           release-url: ${{ steps.create_release.outputs.upload_url }}
