@@ -32,7 +32,6 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
 
-      - name: Archive Release
       - uses: vimtor/action-zip@v1
         with:
           files: dist/ manifest.json
