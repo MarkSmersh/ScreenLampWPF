@@ -23,7 +23,7 @@ jobs:
       - run: dotnet build ${{ env.PROJECT_PATH }} -c Release --no-restore
 
       - run: dotnet publish ${{ env.PROJECT_PATH }} -c Release --self-contained -r win-x64 -p:PublishSingleFile=true
-
+      
       - uses: actions/create-release@v1
         id: create_release
         env:
@@ -32,8 +32,15 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
 
+      - name: Install zip
+        uses: montudor/action-zip@v1
+        
+      - name: Zip output
+        run: zip -qq -r release.zip
+        working-directory: path/to/work-dir
+        
       - uses: csexton/release-asset-action@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          pattern: ScreenLampWPF/bin/Release/net6.0-windows/win-x64/publish
+          pattern: ScreenLampWPF/bin/Release/net6.0-windows/win-x64/*.zip
           release-url: ${{ steps.create_release.outputs.upload_url }}
