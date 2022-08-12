@@ -33,10 +33,10 @@ jobs:
           release_name: ${{ github.ref }}
 
       - name: Archive Release
-        uses: thedoctor0/zip-release@main
+      - uses: vimtor/action-zip@v1
         with:
-          type: 'zip'
-          filename: 'ScreenLampWPF/bin/Release/net6.0-windows/win-x64/publish'
+          files: dist/ manifest.json
+          dest: publish.zip
         
       - uses: csexton/release-asset-action@v2
         with:
