@@ -35,6 +35,7 @@ namespace ScreenLampWPF.Pages
 
         private Point _mousePosition;
         private Alerts _alerts = new Alerts();
+        private ColorPalette _cp = new ColorPalette();
 
         [DllImport("user32.dll")]
         [return: MarshalAs(UnmanagedType.Bool)]
@@ -117,17 +118,15 @@ namespace ScreenLampWPF.Pages
         private void changePinAppState(bool toPin)
         {
             var bc = new BrushConverter();
-            ChangePinAppData.Text = (!toPin).ToString();
+
+            ChangePinAppData.Text = (toPin).ToString();
             if (toPin)
             {
-                ChangePinAppData.Foreground = (Brush)bc.ConvertFrom("#DA7272");
+                ChangePinAppData.Foreground = _cp.OK;
             } else
             {
-                ChangePinAppData.Foreground = (Brush)bc.ConvertFrom("#74DA72");
+                ChangePinAppData.Foreground = _cp.FALSE;
             }
-
-            Console.WriteLine(Settings.Default.PIN_APP);
-            Settings.Default.Save();
 
             if (Update != null)
             {
@@ -158,9 +157,12 @@ namespace ScreenLampWPF.Pages
 
                         EditColorTimeUpdateData.IsReadOnly = true;
                         _isEditColorTimeUpdateActive = false;
-                    } else
+                    }
+                    else
                     {
                         changeColorTime(gottenTimeInt);
+
+                        Settings.Default.COLOR_TIME_UPDATE = gottenTimeInt;
                         Settings.Default.Save();
 
                         EditColorTimeUpdateData.IsReadOnly = true;
@@ -189,8 +191,9 @@ namespace ScreenLampWPF.Pages
 
         private void ChangePinApp_Click(object sender, RoutedEventArgs e)
         {
-            changePinAppState(!Settings.Default.PIN_APP);
             Settings.Default.PIN_APP = !Settings.Default.PIN_APP;
+            changePinAppState(Settings.Default.PIN_APP);
+
             Settings.Default.Save();
         }
 
