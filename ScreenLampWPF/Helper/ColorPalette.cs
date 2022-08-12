@@ -14,5 +14,6 @@ namespace ScreenLampWPF.Helper
         public Brush OK { get; } = (Brush)bc.ConvertFrom("#74DA72");
         public Brush EDITED { get; } = (Brush)bc.ConvertFrom("#DA9E72");
         public Brush BASIC { get; } = (Brush)bc.ConvertFrom("#FFFFFF");
+        public Brush FALSE { get; } = (Brush)bc.ConvertFrom("#DA7272");
     }
 }
