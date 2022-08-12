@@ -1,0 +1,269 @@
+﻿<Page x:Class="ScreenLampWPF.Pages.SetUp"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ScreenLampWPF.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="300"
+      Title="SetUp">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="1"
+                   VerticalAlignment="Top">
+            <Border Background="#23272A"
+                    Height="85"
+                    Width="270"
+                    CornerRadius="12">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="1"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Center">
+                        <TextBlock Text="EMAIL"
+                                   HorizontalAlignment="Center"
+                                   FontFamily="Cascadia Code"
+                                   Foreground="#7289DA"
+                                   FontSize="12"
+                                   FontWeight="Regular"/>
+                        <TextBox x:Name="EmailData"
+                                   Text="null"
+                                   HorizontalAlignment="Center"
+                                   FontFamily="Cascadia Code"
+                                   Foreground="#FFFFFF"
+                                   FontSize="12"
+                                   FontWeight="Regular"
+                                   Margin="0,10,0,0"
+                                   Background="Transparent"
+                                   BorderBrush="Transparent"
+                                   IsReadOnly="True"/>
+                        <Button x:Name="EmailUpdate"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Margin="0,10,0,0"
+                                Cursor="Hand"
+                                Click="EmailUpdate_Click">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <TextBlock Name="TB"
+                                               Text="Edit"
+                                               Foreground="#99AAB5"
+                                               FontSize="12"
+                                               FontFamily="Cascadia Code"
+                                               HorizontalAlignment="Center"
+                                               Width="250"
+                                               TextAlignment="Center"/>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="TB" Property="Background" Value="#99AAB5"/>
+                                            <Setter TargetName="TB" Property="Foreground" Value="#2C2F33"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <Border Background="#23272A"
+                    Height="85"
+                    Width="270"
+                    CornerRadius="12"
+                    Margin="0,10,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="1"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Center">
+                        <TextBlock Text="PASSWORD"
+                                   HorizontalAlignment="Center"
+                                   FontFamily="Cascadia Code"
+                                   Foreground="#7289DA"
+                                   FontSize="12"
+                                   FontWeight="Regular"/>
+                        <TextBox x:Name="PasswordData"
+                                   Text="null"
+                                   HorizontalAlignment="Center"
+                                   FontFamily="Cascadia Code"
+                                   Foreground="#FFFFFF"
+                                   FontSize="12"
+                                   FontWeight="Regular"
+                                   Margin="0,10,0,0"
+                                   Background="Transparent"
+                                   BorderBrush="Transparent"
+                                   IsReadOnly="True"/>
+                        <Button x:Name="PasswordUpdate"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Margin="0,10,0,0"
+                                Cursor="Hand"
+                                Click="PasswordUpdate_Click">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <TextBlock Text="Edit"
+                                               Foreground="#99AAB5"
+                                               FontSize="12"
+                                               FontFamily="Cascadia Code"
+                                               HorizontalAlignment="Center"
+                                               Width="250"
+                                               TextAlignment="Center"
+                                               Name="TB"/>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="TB" Property="Background" Value="#99AAB5"/>
+                                            <Setter TargetName="TB" Property="Foreground" Value="#2C2F33"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <Border Background="#23272A"
+                    Height="85"
+                    Width="270"
+                    CornerRadius="12"
+                    Margin="0,10,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="1"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Center">
+                        <TextBlock Text="DEVICE IP"
+                                   HorizontalAlignment="Center"
+                                   FontFamily="Cascadia Code"
+                                   Foreground="#7289DA"
+                                   FontSize="12"
+                                   FontWeight="Regular"/>
+                        <TextBox x:Name="DeviceIPData"
+                                   Text="null"
+                                   HorizontalAlignment="Center"
+                                   FontFamily="Cascadia Code"
+                                   Foreground="#FFFFFF"
+                                   FontSize="12"
+                                   FontWeight="Regular"
+                                   Margin="0,10,0,0"
+                                   Background="Transparent"
+                                   BorderBrush="Transparent"
+                                   IsReadOnly="True"/>
+                        <Button x:Name="DeviceIPUpdate"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Margin="0,10,0,0"
+                                Cursor="Hand"
+                                Click="DeviceIPUpdate_Click">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <TextBlock Text="Edit"
+                                               Foreground="#99AAB5"
+                                               FontSize="12"
+                                               FontFamily="Cascadia Code"
+                                               HorizontalAlignment="Center"
+                                               Width="250"
+                                               TextAlignment="Center"
+                                               Name="TB"/>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="TB" Property="Background" Value="#99AAB5"/>
+                                            <Setter TargetName="TB" Property="Foreground" Value="#2C2F33"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </StackPanel>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="10"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel VerticalAlignment="Bottom">
+                <Button x:Name="EnterData"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Margin="0,0,0,10"
+                    Cursor="Hand"
+                    Click="EnterData_Click">
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <TextBlock Text="Enter data"
+                                   Foreground="#99AAB5"
+                                   FontSize="16"
+                                   FontFamily="Cascadia Code"
+                                   HorizontalAlignment="Center"
+                                   Width="250"
+                                   TextAlignment="Center"
+                                   Name="TB"/>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="TB" Property="Background" Value="#99AAB5"/>
+                                    <Setter TargetName="TB" Property="Foreground" Value="#2C2F33"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+
+                </Button>
+                <Button x:Name="Back"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Margin="0,0,0,0"
+                    Cursor="Hand"
+                    Click="Back_Click">
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <TextBlock Text="Back"
+                                   Foreground="#99AAB5"
+                                   FontSize="16"
+                                   FontFamily="Cascadia Code"
+                                   HorizontalAlignment="Center"
+                                   Width="250"
+                                   TextAlignment="Center"
+                                   Name="TB"/>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="TB" Property="Background" Value="#99AAB5"/>
+                                    <Setter TargetName="TB" Property="Foreground" Value="#2C2F33"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                    
+                </Button> 
+                
+                 
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

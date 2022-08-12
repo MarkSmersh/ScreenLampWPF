@@ -1,0 +1,174 @@
+﻿<Window x:Class="ScreenLampWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScreenLampWPF"
+        mc:Ignorable="d"
+        Title="ScreenLamp" Height="400" Width="300"
+        Background="#2C2F33"
+        WindowStyle="None" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown"
+        Loaded="Window_Loaded"
+        Icon="Assets/Icons/ScreenLampIconDark.ico"
+        Unloaded="Window_Unloaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <DockPanel  Grid.Column="0"
+                        Height="25" Width="100"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left">
+                <TextBlock Text="ScreenLamp"
+                         Foreground="#99AAB5"
+                         Background="Transparent"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Center"
+                         FontFamily="Cascadia Code"/>
+            </DockPanel>
+
+            <Border Grid.Column="1"
+                    Background="#2C2F33"
+                    CornerRadius="0 0 12 12">
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="2"
+                                      Direction="270"
+                                      Color="Black"
+                                      Opacity="0.25"
+                                      BlurRadius="4"/>
+
+                </Border.Effect>
+
+                <DockPanel>
+                    <Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Name="svg3163" Width="29.999998" Height="30.000001">
+                        <Canvas.RenderTransform>
+                            <TranslateTransform X="0" Y="0"/>
+                        </Canvas.RenderTransform>
+                        <Canvas.Resources/>
+                        <!--Unknown tag: sodipodi:namedview-->
+                        <Canvas Name="g330">
+                            <Canvas.RenderTransform>
+                                <MatrixTransform Matrix="1.2143155 0 0 1.2143155 -0.17894375 -0.17894336"/>
+                            </Canvas.RenderTransform>
+                            <Canvas Name="g241">
+                                <Canvas.RenderTransform>
+                                    <MatrixTransform Matrix="0.04872189 0 0 0.04872189 0.05126496 0.02820458"/>
+                                </Canvas.RenderTransform>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path168" Fill="#FFFFFF" Data="m 253.19 93.27 c 55.8 2 97.06 28.2 119.63 78.87 23 51.66 13.7 100.25 -24.33 142.38 -15.95 17.68 -28.65 36.68 -33.87 60.23 -1.24 5.59 -1.32 9.82 3.27 14.38 5.57 5.54 7.34 12.89 3.26 20.34 -1.95 3.56 -1.47 6.25 -0.21 10 4.14 12.5 -2.49 25.54 1.28 38.47 1.07 3.65 -3 9.45 -7.27 10.51 -10.5 2.57 -13.8 11.23 -19.12 18.78 -22.22 31.55 -69.33 29.14 -88.58 -4.33 -3.27 -5.69 -5.9 -10.48 -13.4 -12.7 -9.52 -2.81 -13.42 -13.87 -9.66 -23.38 1.71 -4.36 3 -7.79 0.27 -12.27 -3 -4.87 -2.21 -10.23 0.29 -15.3 1.22 -2.48 2.59 -4.54 0.77 -7.83 -5 -9 -3.28 -17.49 4.34 -24.38 3.48 -3.14 2.55 -6.45 1.83 -10.11 -4.61 -23.63 -15.9 -43.38 -32.71 -60.66 -69.62 -71.56 -38.15 -189.95 57.66 -218 a 128.22 128.22 0 0 1 36.55 -5 z m 3.49 365.67 c 14.23 0.17 28.45 0.42 42.68 0.47 4.35 0 10.16 0.69 10.57 -5.35 0.43 -6.4 -4.88 -7.49 -10.21 -7.42 q -21.35 0.28 -42.69 0.5 -25 -0.27 -50 -0.53 c -5.22 -0.05 -10.78 1 -10.74 7.13 0.04 6.13 6 5.36 10.36 5.37 16.66 0.02 33.35 -0.11 50.03 -0.17 z m 0.34 -25.33 c 14.25 0.16 28.49 0.3 42.74 0.5 4.83 0.07 9.67 -0.61 9.64 -6.58 0 -6.27 -5.32 -6.19 -9.88 -6.15 -14.24 0.14 -28.49 0.37 -42.73 0.57 -16.7 -0.09 -33.4 -0.24 -50.09 -0.24 -4.33 0 -10.32 -0.95 -10.42 5.3 -0.1 6.25 5.4 7.21 10.67 7.14 Q 232 433.85 257 433.61 Z m -0.46 -26.26 c 14.59 2.15 29.25 1.6 43.89 0.92 4.39 -0.2 10.07 -0.62 9.55 -6.8 -0.45 -5.39 -5.35 -6.44 -10.21 -6.39 -14.26 0.15 -28.51 0.21 -42.77 0.31 q -25.23 -0.21 -50.46 -0.44 c -5 -0.05 -10 1.39 -10.38 6.52 -0.5 6.54 5.48 5.89 9.89 5.91 16.83 0.06 33.66 -0.01 50.49 -0.03 z m -10.3 -52.47 c 0.14 -19.68 0.17 -39.36 0.49 -59 0.1 -5.52 -0.83 -8.63 -7.31 -10.17 -10.22 -2.43 -18 -9.41 -24.57 -17.57 -2.68 -3.34 -3.1 -6.64 0.5 -9.65 3.2 -2.68 6 -1.69 8.61 1 1.42 1.48 2.75 3 4.22 4.48 14.8 14.42 30.49 14.48 45.38 0.17 1.77 -1.7 3.37 -3.57 5.14 -5.27 2.38 -2.28 4.91 -2.59 7.72 -0.59 3.24 2.31 1.42 4.48 0.6 7.33 -2.81 9.81 -10.86 14.49 -18.88 17.75 -7.56 3.09 -9.2 7.16 -9 14.59 0.53 17.61 0.17 35.26 0.17 52.89 0 32.49 0 32.24 32.7 31.78 6.81 -0.1 8.73 -2.32 10 -8.62 4.93 -25.14 16.84 -46.68 34.67 -65.17 q 41.91 -43.44 33.56 -103.49 c -6 -42.55 -40.76 -82.45 -83.24 -94.33 -47.28 -13.23 -95.73 1.27 -124.12 37.15 -39.63 43.29 -37.85 115.51 4.41 158.4 17.38 17.64 30.95 37.43 35.2 61.95 2.08 12 7.05 14.6 18.34 14.24 27.01 -0.88 27.03 -0.29 25.41 -27.87 z m -28.19 118.86 c 8.39 17.11 21.32 23.92 40 22.23 13.88 -1.26 25.37 -10.09 28.67 -22.23 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path170" Fill="#312783" Data="m 449.83 226.2 c -5.27 0 -10.56 0.23 -15.81 -0.08 -3.57 -0.21 -6.26 -2.32 -6.25 -6.15 a 5.87 5.87 0 0 1 6.13 -6.23 c 11.36 -0.16 22.72 -0.14 34.07 0.14 a 5.61 5.61 0 0 1 5.7 5.35 5.79 5.79 0 0 1 -5.6 6.69 c -6.05 0.49 -12.15 0.14 -18.24 0.14 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path172" Fill="#F9B233" Data="m 135.89 94.56 c -0.89 1.18 -1.75 3.29 -3.31 4.2 -3.18 1.84 -6.31 0.95 -8.92 -1.66 -7.24 -7.27 -14.54 -14.47 -21.72 -21.8 -2 -2.08 -4.3 -5.18 -1.89 -7.5 2.11 -2 6.35 -3.74 9.06 -1.86 10.11 7 18.14 16.26 26.11 25.53 0.46 0.53 0.36 1.53 0.67 3.09 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path174" Fill="#009FE3" Data="M 411.71 71.35 A 19.16 19.16 0 0 1 409.34 75 Q 398.6 86 387.66 96.8 c -3.29 3.25 -7 4.49 -10.68 0.64 -3.47 -3.66 -1.23 -6.8 1.51 -9.58 6.62 -6.72 13.39 -13.3 19.95 -20.08 3.18 -3.28 6.41 -2 10 -1.08 2.46 0.63 3.5 1.66 3.27 4.65 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path176" Fill="#E6332A" Data="m 135.67 347.17 a 14.85 14.85 0 0 1 -2.06 3.48 c -7.36 7.56 -14.74 15.11 -22.29 22.48 -3.32 3.23 -7.22 3.93 -10.62 0.09 -3.4 -3.84 -0.68 -6.8 1.92 -9.46 6.23 -6.4 12.73 -12.54 18.86 -19 3.61 -3.83 7.58 -2.47 11.65 -1.7 1.87 0.31 2.71 1.45 2.54 4.11 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path178" Fill="#662483" Data="m 383.7 342.58 c 4.26 0.43 27.09 21.67 27.92 25.91 a 5.55 5.55 0 0 1 -1.91 5.48 c -2.47 2.3 -5.85 2.57 -7.9 0.65 -8.65 -8.14 -16.93 -16.68 -25.25 -25.16 -1.53 -1.56 -2.13 -4.22 -0.49 -5.57 a 7.78 7.78 0 0 1 7.63 -1.31 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path180" Fill="#009640" Data="m 249.18 24.86 c 0 -5.29 0 -10.58 0 -15.87 0 -3.85 2.08 -7 5.59 -6.49 3 0.42 7.18 1.72 7.13 6.66 -0.12 10.58 0 21.17 -0.07 31.75 0 3.77 -1.91 6.26 -5.78 6.5 -4.53 0.27 -6.74 -2.32 -6.83 -6.67 -0.12 -5.29 -0.03 -10.58 -0.04 -15.88 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path182" Fill="#E94E1B" Data="m 60.54 213.67 c 5.31 0 10.62 -0.14 15.92 0 3.85 0.12 5.66 2.05 5.74 6.22 0.08 4.17 -2 6.1 -5.71 6.17 -10.61 0.21 -21.23 0.32 -31.84 0 -3.83 -0.09 -7.09 -1.79 -7.36 -6.57 -0.33 -5.58 3.8 -5.59 7.33 -5.79 5.29 -0.24 10.61 -0.01 15.92 -0.03 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path184" Fill="#FFFFFF" Data="m 186 32.53 c 5.75 1.24 6.78 5.94 7.94 10.13 1.54 5.55 7.08 10.74 2.55 17 -1.8 2.48 -5.21 3.62 -7.42 1 a 37.36 37.36 0 0 1 -8.75 -23.3 C 180.2 34.28 183 32.64 186 32.53 Z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path186" Fill="#FFFFFF" Data="m 436.07 143.73 c 3.61 0 7.19 2.42 6.3 6.42 -2.12 9.5 -11.75 8.32 -18.45 11 -3.8 1.51 -7.32 -0.12 -7.67 -5.07 -0.31 -4.4 11.54 -12 19.82 -12.35 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path188" Fill="#FFFFFF" Data="m 94.59 284 c -1.9 8.13 -9.21 7.65 -14.33 10.23 -3.77 1.9 -7.71 3.38 -10.79 -1.16 a 5 5 0 0 1 -1 -3.41 c 1.93 -8.08 9.26 -8.71 15.27 -9.17 2.99 -0.27 8.81 -1.88 10.85 3.51 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path190" Fill="#FFFFFF" Data="m 97.33 147.44 c -0.49 3.72 -2.47 5.86 -6.36 5.93 -6.59 0.13 -19.85 -8.66 -18.81 -12.67 1.04 -4.01 4.68 -5.09 8.43 -4.89 6.91 0.37 16.93 7.46 16.74 11.63 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path192" Fill="#FFFFFF" Data="m 421.32 286.46 c 5.37 3.89 14.43 2.93 17.07 11.18 0.36 1.11 -0.53 8.67 -5.83 6.77 -6.79 -2.42 -16.23 -2 -18 -11.76 -0.72 -3.85 2.64 -5.5 6.76 -6.19 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path194" Fill="#FFFFFF" Data="m 334 36.27 c 4.41 1 7.87 3.58 6.18 7.6 -2.49 5.93 -2.35 14.58 -11 15.83 -4.45 0.65 -7.13 -3.23 -5.7 -7.2 C 325.63 46.37 326 38.54 334 36.27 Z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path196" Fill="#312780" Data="M 162.89 148.14 C 191.28 112.26 239.73 97.76 287 111 c 42.48 11.88 77.28 51.78 83.24 94.33 q 8.43 60.17 -33.56 103.49 C 318.86 327.3 307 348.84 302 374 c -1.24 6.3 -3.16 8.52 -10 8.62 -32.7 0.46 -32.7 0.71 -32.7 -31.78 0 -17.63 0.36 -35.28 -0.17 -52.89 -0.22 -7.43 1.42 -11.5 9 -14.59 8 -3.26 16.07 -7.94 18.88 -17.75 0.82 -2.85 2.64 -5 -0.6 -7.33 -2.81 -2 -5.34 -1.69 -7.72 0.59 -1.77 1.7 -3.37 3.57 -5.14 5.27 -14.86 14.29 -30.55 14.23 -45.35 -0.14 -1.47 -1.43 -2.8 -3 -4.22 -4.48 -2.58 -2.7 -5.41 -3.69 -8.61 -1 -3.6 3 -3.18 6.31 -0.5 9.65 6.55 8.16 14.35 15.14 24.57 17.57 6.48 1.54 7.41 4.65 7.31 10.17 -0.32 19.67 -0.35 39.35 -0.49 59 -10.71 -22.14 -24 -42.76 -37.06 -63.54 C 181.7 247.54 157 202.76 162.89 148.14 Z m 114.37 -27 c -26.4 -0.16 -39 15.57 -33 41.15 7.32 31.22 40.1 60.93 71.55 64.84 27.68 3.44 44.53 -14.3 39.26 -41.36 -6.43 -32.94 -44.34 -64.45 -77.81 -64.65 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path198" Fill="#FFED80" Data="m 162.89 148.14 c -5.87 54.62 18.81 99.4 46.31 143.2 13.05 20.78 26.35 41.4 37.06 63.54 1.62 27.58 1.6 27 -25.42 27.85 -11.29 0.36 -16.26 -2.26 -18.34 -14.24 -4.25 -24.52 -17.82 -44.31 -35.2 -61.95 -42.3 -42.89 -44.04 -115.11 -4.41 -158.4 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path200" Fill="#839198" Data="m 218.07 473.74 h 68.64 c -3.3 12.14 -14.79 21 -28.67 22.23 -18.65 1.69 -31.58 -5.12 -39.97 -22.23 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path202" Fill="#839198" Data="m 256.56 407.35 c -16.83 0 -33.66 0.09 -50.49 0 -4.41 0 -10.39 0.63 -9.89 -5.91 0.4 -5.13 5.42 -6.57 10.38 -6.52 q 25.23 0.27 50.46 0.44 -0.22 6.02 -0.46 11.99 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path204" Fill="#AFB5BA" Data="m 256.56 407.35 q 0.22 -6 0.46 -12 c 14.26 -0.1 28.51 -0.16 42.77 -0.31 4.86 -0.05 9.76 1 10.21 6.39 0.52 6.18 -5.16 6.6 -9.55 6.8 -14.64 0.77 -29.3 1.27 -43.89 -0.88 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path206" Fill="#839198" Data="m 257 433.61 q -25 0.27 -50.07 0.54 c -5.27 0.07 -10.77 -1 -10.67 -7.14 0.1 -6.14 6.09 -5.3 10.42 -5.3 16.69 0 33.39 0.15 50.09 0.24 q 0.14 5.82 0.23 11.66 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path208" Fill="#839198" Data="m 256.68 458.94 c -16.69 0.07 -33.37 0.19 -50.05 0.17 -4.33 0 -10.33 0.89 -10.36 -5.37 -0.03 -6.26 5.52 -7.18 10.74 -7.13 q 25 0.24 50 0.53 -0.16 5.86 -0.33 11.8 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path210" Fill="#AFB5BA" Data="m 256.68 458.94 q 0.18 -5.91 0.35 -11.8 21.35 -0.24 42.69 -0.5 c 5.33 -0.07 10.64 1 10.21 7.42 -0.41 6 -6.22 5.37 -10.57 5.35 -14.23 -0.05 -28.45 -0.3 -42.68 -0.47 z"/>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path212" Fill="#AFB5BA" Data="m 257 433.61 q -0.11 -5.83 -0.23 -11.66 c 14.24 -0.2 28.49 -0.43 42.73 -0.57 4.56 0 9.85 -0.12 9.88 6.15 0 6 -4.81 6.65 -9.64 6.58 -14.23 -0.2 -28.47 -0.34 -42.74 -0.5 z"/>
+                            </Canvas>
+                        </Canvas>
+                    </Canvas>
+                </DockPanel>
+            </Border>
+
+
+            <DockPanel Grid.Column="2"
+                       Height="25" Width="100"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Right">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="WinMinimize"
+                            Grid.Column="0"
+                            BorderThickness="0"
+                            Content="—"
+                            FontFamily="Cascadia Code"
+                            Foreground="#99AAB5"
+                            Cursor="Hand"
+                            FontSize="16"
+                            Click="WinMinimize_Click">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#312780"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <Button x:Name="WinClose"
+                            Grid.Column="2"
+                            BorderThickness="0"
+                            Content="x"
+                            FontFamily="Cascadia Code"
+                            Foreground="#99AAB5"
+                            Cursor="Hand"
+                            FontSize="16"
+                            Click="WinClose_Click">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#B50000"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </Grid>
+            </DockPanel>
+        </Grid>
+
+        <Frame x:Name="MainFrame" Grid.Row="2" NavigationUIVisibility="Hidden" Focusable="False"></Frame>
+    </Grid>
+</Window>
